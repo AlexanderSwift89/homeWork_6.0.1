@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView displayNum;
-    private Button btn0, btn1,btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDot;
+    private Button btn0, btn1,btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDot, btnClr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
         btn0.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                displayNum.setText(0);
+                displayNum.setText(displayNum.getText() + "0");
             }
         });
         //нажатиен на кнопку "1"
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                displayNum.setText(1);
+                displayNum.setText(displayNum.getText() + "1");
             }
         });
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                displayNum.setText(2);
+                displayNum.setText(displayNum.getText() + "2");
             }
         });
 
@@ -46,10 +46,73 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                displayNum.setText(3);
+                displayNum.setText(displayNum.getText() + "3");
             }
         });
 
+        //нажатиен на кнопку "4"
+        btn4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + "4");
+            }
+        });
+
+        //нажатиен на кнопку "5"
+        btn5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + "5");
+            }
+        });
+
+        //нажатиен на кнопку "6"
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + "6");
+            }
+        });
+
+        //нажатиен на кнопку "7"
+        btn7.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + "7");
+            }
+        });
+
+        //нажатиен на кнопку "8"
+        btn8.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + "8");
+            }
+        });
+
+        //нажатиен на кнопку "9"
+        btn9.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + "9");
+            }
+        });
+
+        //нажатиен на кнопку "dot"
+        btnDot.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText(displayNum.getText() + ".");
+            }
+        });
+
+        //нажатиен на кнопку "clear"
+        btnClr.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                displayNum.setText("0");
+            }
+        });
     }
 
     private void initViews(){
@@ -65,5 +128,6 @@ public class MainActivity extends AppCompatActivity {
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
         btnDot = findViewById(R.id.btnDot);
+        btnClr = findViewById(R.id.btnClr);
     }
 }
